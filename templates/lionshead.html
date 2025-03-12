@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hikers Guide: Lions Head</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/lionshead.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+<body>
+        <!-- Button to toggle sidebar -->
+        <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+
+        <!-- Sidebar content -->
+            <nav class="sidebar">
+            <label for="sidebar-toggle" class="close-btn">x</label>
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="kloofcorner.html">Kloof Corner</a>
+                <a href="devilspeak.html">Devil's Peak</a>
+                <a href="skeletongorge.html">Skeleton Gorge</a>
+            </ul>
+        </nav>
+
+        <!-- Home page header -->
+        <header>
+            <label for="sidebar-toggle" class="burger-menu">☰</label>
+            <h1>Lion's Head</h1>
+        </header>
+        <div><img id="home-banner" src="../images/lionshead-banner.jpg" alt="lions head banner"></div>
+        <div class="hike-description">
+            <h2>About...</h2>
+            <div class="hike-text">
+                <p>
+                    This is the most popular hike in Cape Town during any time of the year. The remarkable views of Cape Town and its beautiful sunset
+                    are on complete display at the top of Lion's Head. This hike is relatively short but do not underestimate its intensity: it is a <b>full</b> workout to the top.
+                    The route is easy to follow with clear markings, and the ground is relatively stable. There is some rock scrambling required closer to the top, where there are 
+                    ropes and metal ladders to offer support.<br><br>
+                    The route is both child- and dog-friendly, provided you have a permit for the dog. When bringing children, it may be best to skip the scrambling and take
+                    the walkaround path. This is the first hike for most in Cape Town, but has a lasting impression that has definitely converted non-hikers to hikers many times over.
+
+                </p>
+                <button class="like-btn" data-hike="lions-head">Like this hike!</button>
+                <span class="like-count" id="likes-lions-head">0</span> likes   
+            </div>
+            <div class="hike-table">
+                <table>
+                    <h2>Hike Details:</h2>
+                    <tr>
+                        <th>Trail Length</th>
+                        <td><b>5.5km</b></td>
+                    </tr>
+                    <tr>
+                        <th>Duration</th>
+                        <td><b>+- 2.5hrs</b></td>
+                    </tr>
+                    <tr>
+                        <th>Start Point</th>
+                        <td><b>Lion's Head parking lot. Park off anywhere nearby and find the signage for the trail at the base of the mountain</b></td>
+                    </tr>
+                    <tr>
+                        <th>Difficulty</th>
+                        <td><b>7/10</b></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script src="../scripts/likes.js"></script>
+    </body>
+</html>

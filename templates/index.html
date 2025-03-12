@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Hikers Guide to Cape Town</title>
+        <meta name="description" content="Website dedicated to informing avid hikers of the best hikes to do in Cape Town.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/main.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <!-- Button to toggle sidebar -->
+        <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+
+        <!-- Sidebar content -->
+         <nav class="sidebar">
+            <label for="sidebar-toggle" class="close-btn">x</label>
+            <ul>
+                <a href="lionshead.html">Lion's Head</a>
+                <a href="kloofcorner.html">Kloof Corner</a>
+                <a href="devilspeak.html">Devil's Peak</a>
+                <a href="skeletongorge.html">Skeleton Gorge</a>
+            </ul>
+        </nav>
+
+        <!-- Home page header -->
+        <header>
+            <label for="sidebar-toggle" class="burger-menu">☰</label>
+            <h1>Hiking in Cape Town</h1>
+            <div id="saveforlater-btn" onclick="location.href='saveforlater.html'">★</div>
+        </header>
+        <div><img id="home-banner" src="../images/tablemountain-banner.jpg" alt="table mountain banner"></div>
+
+        <div id="general-information">
+            <h1 class="content-header">General information...</h1>
+            <p>
+                Cape Town was recently named <b><i>Time Out's</i> <a id="timeout-best-city" target="_blank" href="https://www.timeout.com/cape-town/news/cape-town-named-time-out-best-city-world-011525">
+                'Best City in the World 2025'</a></b>, and there is no better time to start
+                exploring the city's wonders. Among its most impressive features are the mountains that surround the beautiful city.
+                From <b>Table Mountain</b> to <b>Lion's Head</b>, there are countless trails and tracks for hikers to explore. Most notable
+                of these (and included in this website) are:<br>
+            </p>
+            <ul id="hikes-list">
+                <li><b>Lion's Head</b> - A popular sunrise and sunset hike with a short but steep climb with rewarding 360° views
+                <button class="save-btn" data-hike="Lion's Head">Save for later</button></li>
+                <li><b>Devil's Peak</b> - A less crowded but rewarding trail offering fantastic views of the city
+                <button class="save-btn" data-hike="Devil's Peak">Save for later</button></li>
+                <li><b>Kloof Corner</b> - A short but scenic trail with a mindblowing lookout perfect for sunsets
+                <button class="save-btn" data-hike="Kloof Corner">Save for later</button></li>
+                <li><b>Skeleton Gorge</b> - A lush trail beginning in Kirstenbosch Botanical and leading to the peak of Table mountain
+                <button class="save-btn" data-hike="Skeleton Gorge">Save for later</button></li>
+            </ul>
+            <script src="../scripts/index.js"></script>
+            <p>
+                These are among some of the most popular routes nestled in the Cape mountains, but there are many more less known ones,
+                all offering a different view to showcase Cape Town's natural beauty. <b>Open up the burger menu</b> to explore those showcased on this website,
+                and where they can be found in Cape Town...
+            </p>
+        </div>
+        <div class="container">
+            <div id="newsletter-form">
+                <h2>Subscribe to our newsletter below!</h2>
+                <p>
+                    If you'd like to recieve weekly updates on <b>your next hike</b>, fill out your details below and we'll
+                    be sure to keep you in the loop:
+                </p>
+                <form>
+                    <label for="name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name..." required>
+
+                    <label for="surname">Surname:</label>
+                    <input type="text" id="surname" name="surname" placeholder="Enter your surname..." required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your email..." required>
+
+                    <label for="address">Address:</label>
+                    <textarea type="text" id="address" name="address" placeholder="Enter your address..." rows="3"></textarea>
+
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="image-container">
+                <img src="../images/hiking-1.jpg" alt="hiking image 1"><img src="../images/hiking-2.jpg" alt="hiking image 2"><img src="../images/hiking-3.jpg" alt="hiking image 3">
+            </div>
+        </div>
+    </body>
+</html>

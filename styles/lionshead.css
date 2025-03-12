@@ -1,0 +1,133 @@
+body {
+  background-color: #EBE8E2;
+  color: #525564;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #333;
+  padding-top: 60px;
+  transition: 0.4s;
+  z-index: 2;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar a:hover {
+  background: #575757;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: gray;
+}
+
+.sidebar-checkbox {
+  display: none;
+}
+
+.sidebar-checkbox:checked ~ .sidebar {
+  left: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #33505e;
+  color: white;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.burger-menu {
+  position: fixed;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.burger-menu:hover {
+  color: gray;
+}
+
+#home-banner {
+  min-width: 100%;
+  height: auto;
+}
+
+.content-header {
+  position: relative;
+  text-align: left;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-right: 25px;
+}
+
+p {
+  text-align: left;
+  padding: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hike-description {
+  display: flex;
+  padding: 20px;
+}
+
+.hike-text {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.hike-table {
+  width: 50%;
+  padding-right: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #444;
+  color: white;
+}
+
+h2 {
+  text-align: left;
+}/*# sourceMappingURL=lionshead.css.map */

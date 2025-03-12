@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Hikers Guide to Cape Town</title>
+        <meta name="description" content="Website dedicated to informing avid hikers of the best hikes to do in Cape Town.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/saveforlater.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <!-- Button to toggle sidebar -->
+        <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+
+        <!-- Sidebar content -->
+         <nav class="sidebar">
+            <label for="sidebar-toggle" class="close-btn">x</label>
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="lionshead.html">Lion's Head</a>
+                <a href="kloofcorner.html">Kloof Corner</a>
+                <a href="devilspeak.html">Devil's Peak</a>
+                <a href="skeletongorge.html">Skeleton Gorge</a>
+            </ul>
+        </nav>
+
+        <!-- Home page header -->
+        <header>
+            <label for="sidebar-toggle" class="burger-menu topnav-icon">☰</label>
+            <h1>Your Hikes</h1>
+        </header>
+        <div id="saved-hikes-container">
+            <h2>Your Saved Hikes</h2>
+            <ul id="saved-hikes-list"></ul>
+        </div>
+        <script src="../scripts/savedHikes.js"></script>

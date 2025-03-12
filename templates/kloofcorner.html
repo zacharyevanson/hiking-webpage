@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hikers Guide: Kloof Corner</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/kloofcorner.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+<body>
+        <!-- Button to toggle sidebar -->
+        <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+
+        <!-- Sidebar content -->
+            <nav class="sidebar">
+            <label for="sidebar-toggle" class="close-btn">x</label>
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="lionshead.html">Lion's Head</a>
+                <a href="devilspeak.html">Devil's Peak</a>
+                <a href="skeletongorge.html">Skeleton Gorge</a>
+            </ul>
+        </nav>
+
+        <!-- Home page header -->
+        <header>
+            <label for="sidebar-toggle" class="burger-menu">☰</label>
+            <h1>Kloof Corner</h1>
+        </header>
+        <div><img id="home-banner" src="../images/kloofcorner-banner.jpg" alt="kloof corner banner"></div>
+        <div class="hike-description">
+            <h2>About...</h2>
+            <div class="hike-text">
+                <p>
+                    Kloof Corner is definitely the easiest hike on this list, but still not to be underestimated. There are a number of steeper sections on this hike 
+                    that will make you sweat. Also, there is a lot of loose rock, so just take care when placing feet and balance. Otherwise, this is an excellent and super
+                    rewarding hike, with views of the city bowl, Camps Bay, Lion's Head, all overlooking the massive Atlantic Ocean.<br><br>
+
+                    A shorter but very sweet hike that offers incredible lookouts of Cape Town, this is very much a local and non-local favourite. It is short enough to do before 
+                    or after work, and still feel like you've enjoyed a thorough workout.
+                </p>
+                <button class="like-btn" data-hike="kloof-corner">Like this hike!</button>
+                <span class="like-count" id="likes-kloof-corner">0</span> likes
+            </div>
+            <div class="hike-table">
+                <table>
+                    <h2>Hike Details:</h2>
+                    <tr>
+                        <th>Trail Length</th>
+                        <td><b>1.5km</b></td>
+                    </tr>
+                    <tr>
+                        <th>Duration</th>
+                        <td><b>+- 40min</b></td>
+                    </tr>
+                    <tr>
+                        <th>Start Point</th>
+                        <td><b>Tafelberg Road. Drive past the cable station, park at the furthest parking lot (next to the hairpin) and find the signage for the trail on the right of the road</b></td>
+                    </tr>
+                    <tr>
+                        <th>Difficulty</th>
+                        <td><b>3/10</b></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script src="../scripts/likes.js"></script>
+    </body>
+</html>

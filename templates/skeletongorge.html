@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hikers Guide: Skeleton Gorge</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/skeletongorge.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+<body>
+        <!-- Button to toggle sidebar -->
+        <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+
+        <!-- Sidebar content -->
+            <nav class="sidebar">
+            <label for="sidebar-toggle" class="close-btn">x</label>
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="lionshead.html">Lion's Head</a>
+                <a href="kloofcorner.html">Kloof Corner</a>
+                <a href="devilspeak.html">Devil's Peak</a>
+            </ul>
+        </nav>
+
+        <!-- Home page header -->
+        <header>
+            <label for="sidebar-toggle" class="burger-menu">☰</label>
+            <h1>Skeleton Gorge</h1>
+        </header>
+        <div><img id="home-banner" src="../images/skeletongorge-banner.jpg" alt="devils peak banner"></div>
+        <div class="hike-description">
+            <h2>About...</h2>
+            <div class="hike-text">
+                <p>
+                    Found on <b>Table Mountain</b>, Skeleton Gorge is a wonderful but challenging hike that has always been popular with some of the more experienced hikers.
+                    Initially, it consists of a single rocky track that rises into the lush Table Mountain foliage. The route requires some light scrambling, and there are a couple ladders to help you up as well.<br><br>
+                    After making your way through the beautiful Kirstenbosch Botanical, the hike begins in a very dense plant environment. It then leads all the way up Table Mountain, with a 'beach' at the head of the trail.
+                    This is one of the major attractions of the hike, alongwith a waterfall, and an abundance of local biodiversity.
+ 
+                </p>
+                <button class="like-btn" data-hike="skeleton-gorge">Like this hike!</button>
+                <span class="like-count" id="likes-skeleton-gorge">0</span> likes
+            </div>
+            <div class="hike-table">
+                <table>
+                    <h2>Hike Details:</h2>
+                    <tr>
+                        <th>Trail Length</th>
+                        <td><b>5.3km</b></td>
+                    </tr>
+                    <tr>
+                        <th>Duration</th>
+                        <td><b>+- 4.5hrs</b></td>
+                    </tr>
+                    <tr>
+                        <th>Start Point</th>
+                        <td><b>Kirstenbosch Gardens</b></td>
+                    </tr>
+                    <tr>
+                        <th>Difficulty</th>
+                        <td><b>8/10</b></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script src="../scripts/likes.js"></script>
+    </body>
+</html>

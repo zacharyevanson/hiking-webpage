@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hikers Guide: Devils Peak</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/devilspeak.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+<body>
+        <!-- Button to toggle sidebar -->
+        <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+
+        <!-- Sidebar content -->
+            <nav class="sidebar">
+            <label for="sidebar-toggle" class="close-btn">x</label>
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="lionshead.html">Lion's Head</a>
+                <a href="kloofcorner.html">Kloof Corner</a>
+                <a href="skeletongorge.html">Skeleton Gorge</a>
+            </ul>
+        </nav>
+
+        <!-- Home page header -->
+        <header>
+            <label for="sidebar-toggle" class="burger-menu">☰</label>
+            <h1>Devil's Peak</h1>
+        </header>
+        <div><img id="home-banner" src="../images/devilspeak-banner.jpg" alt="devils peak banner"></div>
+        <div class="hike-description">
+            <h2>About...</h2>
+            <div class="hike-text">
+                <p>
+                    Poking out next to Table Mountain is Devil's Peak, a less popular but equally iconic mountain, offering some extraordinary trails.
+                    Riddled with fynbos and other indigenous life, the hikes here offer natural beauty and incredible views of Cape Town's city centre.
+                    This hike is scalable for most, including dogs and kids!<br><br>
+                    There are various trails that split in a fork right at the beginning of the trail, but they all lead back to the beginning so its
+                    difficult to get lost.
+                </p>
+                <button class="like-btn" data-hike="devils-peak">Like this hike!</button>
+                <span class="like-count" id="likes-devils-peak">0</span> likes
+            </div>
+            <div class="hike-table">
+                <table>
+                    <h2>Hike Details:</h2>
+                    <tr>
+                        <th>Trail Length</th>
+                        <td><b>6km</b></td>
+                    </tr>
+                    <tr>
+                        <th>Duration</th>
+                        <td><b>+- 3hrs</b></td>
+                    </tr>
+                    <tr>
+                        <th>Start Point</th>
+                        <td><b>Tafelberg Road. Drive past the cable station, park at the furthest parking lot and find the signage for the trail on the right of the road</b></td>
+                    </tr>
+                    <tr>
+                        <th>Difficulty</th>
+                        <td><b>6/10</b></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script src="../scripts/likes.js"></script>
+    </body>
+</html>
