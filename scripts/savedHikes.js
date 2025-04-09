@@ -4,9 +4,11 @@ $(document).ready(function() {
     let comments = JSON.parse(sessionStorage.getItem("hikeComments")) || {};
 
     if (savedHikes.length === 0) {
+        // in initial case of no hikes being saved yet and user visits page
         hikesList.append("<li>No hikes saved yet.</li>");
     } else {
         savedHikes.forEach(hike => {
+            // fetching details of each saved hike
             let hikeDetails = getHikeDetails(hike);
             let hikeComments = comments[hike] || [];
 
@@ -30,18 +32,22 @@ $(document).ready(function() {
     }
 
     $(".remove-btn").click(function () {
+        // allows users to remove hikes from their saved hikes
         let hikeToRemove = $(this).data("hike");
         savedHikes = savedHikes.filter(hike => hike !== hikeToRemove);
         delete comments[hikeToRemove]; // Ensure comments for the hike are also removed
 
+        // updating session storage for hikes and comments to ensure that deleted hikes are no longer present
         sessionStorage.setItem("savedHikes", JSON.stringify(savedHikes));
         sessionStorage.setItem("hikeComments", JSON.stringify(comments));
         location.reload();
     });
 
     $(".comment-btn").click(function () {
+        // allow user to comment on each hike
         let hike = $(this).data("hike");
         let commentInput = $(`textarea[data-hike="${hike}"]`);
+        // trimming and updating with value
         let commentText = commentInput.val().trim();
 
         if (commentText) {
@@ -60,6 +66,7 @@ $(document).ready(function() {
     });
 });
 
+// hike details stored as data for each hike. Could be updated to JSON file for abstraction and refactoring purposes
 function getHikeDetails(hikeName) {
     const hikeData = {
         "Devil's Peak": `<table class="hike-details">
