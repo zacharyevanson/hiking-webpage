@@ -1,24 +1,35 @@
 $(document).ready(function () {
-    // allow user to 'like' hike
-    let likeBtn = document.querySelector(".like-btn")
-    let hikeName = likeBtn.getAttribute("data-hike")
-    // retrieving number of likes for a hike from session storage
-    let likes = JSON.parse(sessionStorage.getItem("hikeLikes")) || {};
-
-    if (!likes[hikeName]) {
-        // initializing likes for a hike without any likes
-        likes[hikeName] = 0;
-        // setting session storage to carry over likes
-        sessionStorage.setItem("hikeLikes", JSON.stringify(likes));
+    // function to initialize hike likes
+    function initializeLikes(hikeName) {
+        let likes = JSON.parse(sessionStorage.getItem("hikeLikes")) || {};
+        if (!likes[hikeName]) {
+            likes[hikeName] = 0;
+            sessionStorage.setItem(JSON.stringify("hikeLikes", likes));
+        }
+        return likes;
+    }
+    
+    // function to update likes
+    function updateLikesDisplay(hikeName, likes) {
+        $("#likes-" + hikeName).text(likes[hikeName]);
     }
 
-    $("#likes-" + hikeName).text(likes[hikeName]);
-
-    $(".like-btn").click(function () {
-        // on click, increment number of likes by 1
+    // function to handle and update likes
+    function handleLike(hikeName) {
+        let likes = JSON.parse(sessionStorage.getItem("hikeLikes"));
         likes[hikeName] += 1;
         sessionStorage.setItem("hikeLikes", JSON.stringify(likes));
+        updateLikesDisplay(hikeName, likes)
+    }
 
-        $("#likes-" + hikeName).text(likes[hikeName]);
+    // main logic
+    $(".like-btn").each(function () {
+        const hikeName = $(this).data("hike");
+        let likes = initializeLikes(hikeName);
+        updateLikesDisplay(hikeName, likes);
+
+        $(this).click(function () {
+            handleLike(hikeName);
+        });
     });
 });
